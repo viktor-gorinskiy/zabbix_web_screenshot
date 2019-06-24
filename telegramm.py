@@ -4,7 +4,7 @@ import main
 import config
 import cherrypy
 
-WEBHOOK_HOST = '78.47.49.149'
+WEBHOOK_HOST = '78.78.79.79' # Локальный ip адрес
 WEBHOOK_PORT = 8443  # 443, 80, 88 или 8443 (порт должен быть открыт!)
 WEBHOOK_LISTEN = '0.0.0.0'  # На некоторых серверах придется указывать такой же IP, что и выше
 WEBHOOK_SSL_CERT = '/etc/zabbix/externalscripts/telegramm_confirm_problems/webhook_cert.pem'  # Путь к сертификату
