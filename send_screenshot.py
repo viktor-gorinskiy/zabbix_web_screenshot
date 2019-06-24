@@ -6,7 +6,7 @@ import telebot
 #from telebot import apihelper
 import config, time
 
-patch = '/etc/zabbix/externalscripts/telegramm_confirm_problems/'
+patch = config.patch
 try:
     mes = sys.argv[1]
     print('mes: ',mes)
@@ -40,7 +40,7 @@ screenshot = open(screenshot_name, 'rb')
 
 bot = telebot.TeleBot(config.token)
 
-#bot.send_message('-192029615', url)
-bot.send_photo('-192029615', screenshot)
+#bot.send_message(config.id_group, url)
+bot.send_photo(config.id_group, screenshot)
 
 
