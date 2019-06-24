@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram bot zabbix
+
+[Service]
+WorkingDirectory=/etc/zabbix/externalscripts/telegramm_confirm_problems
+ExecStart=/usr/bin/python3 /etc/zabbix/externalscripts/telegramm_confirm_problems/telegramm.py
+Restart=always
+RestartSec=10
+SyslogIdentifier=telegramm.py
+User=zabbix
+
+[Install]
+WantedBy=multi-user.target
